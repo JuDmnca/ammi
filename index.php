@@ -65,7 +65,7 @@ require ('php/session.php');
             foreach($allworks as $w)
             {
           ?>
-          <li class="list-group-item whitetext"><a href="project.php?id=<?= $w["id"] ?>">
+          <li class="list-group-item whitetext"><a href="project.php?id=<?= $w->id ?>">
             <?php echo($w["title"]); ?></a></li>
           <?php
             }
