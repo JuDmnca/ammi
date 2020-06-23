@@ -1,25 +1,11 @@
 
 <?php
-//session_start();
-//include_once("php/code.php");
+session_start();
+include_once("php/code.php");
 
-//$user = new Users;
-//$work = new Works;
-//require('php/session.php');
-?>
-
-<?php include ('php/db.php')?>
-<?php include ('php/config.php')?>
-
-<?php
-
-  $sql = 'SELECT * FROM Users';
-  $stmt = $pdo->prepare($sql);
-  $stmt->execute();
-  $rowCount = $stmt->rowCount();
-  $details = $stmt->fetch();
-
-  print_r ($details);
+$user = new Users;
+$work = new Works;
+require('php/session.php');
 ?>
 
 <!DOCTYPE html>
