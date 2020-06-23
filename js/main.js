@@ -48,6 +48,7 @@ $(function() {
         }
         if (data.current.namespace === ('project' || 'home') && data.next.namespace != ('project' || 'home')) {
           textColor = 1;
+          console.log(change);
         }
 
         pageTransition();
