@@ -33,13 +33,14 @@ require ('php/session.php');
           <div class="ml-auto">
             <a class="navbar-brand bold" href="collection.php">Our collection</a>
             <a class="navbar-brand bold" href="about.php">About us</a>
-            <?php if($Connected == true){?>
-            <p class="navbar-brand d-inline"><?php if(isset($_SESSION["account"]["username"]))
-            {echo($_SESSION["account"]["username"]);};?>
+            <?php if($Connected == true){ ?>
+            <p class="navbar-brand d-inline">
+            <?php if(isset($_SESSION["account"]["username"])){
+              echo($_SESSION["account"]["username"]);};?>
             </p>
             <a class="navbar-brand d-inline" href="logout.php">LOGOUT</a>
-            <?php}?>
           </div>
+          <?php } ?>
       </nav>
       <a href="login.php" class="dot"><i class="fas fa-circle"></i></a>
 
