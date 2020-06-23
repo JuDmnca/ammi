@@ -27,26 +27,26 @@ $(function() {
       async leave(data) {
         const done = this.async();
         $('.loading-screen').removeClass('blue grey orange');
-        if (data.current.url.href === 'http://localhost:8888/ammi%20/project.php?id=1') {
+        if (data.current.url.href === 'https://a-mmi.herokuapp.com/project.php?id=1') {
           $('.loading-screen').css("background-color", "#279B94");
         }
-        if (data.current.url.href === 'http://localhost:8888/ammi%20/project.php?id=2') {
+        if (data.current.url.href === 'https://a-mmi.herokuapp.com/project.php?id=2') {
           $('.loading-screen').css("background-color", "grey");
         }
-        if (data.current.url.href === 'http://localhost:8888/ammi%20/project.php?id=3') {
+        if (data.current.url.href === 'https://a-mmi.herokuapp.com/project.php?id=3') {
           $('.loading-screen').css("background-color", "#D55000");
         }
         var nextColor = '';
-        if (data.next.url.href === 'http://localhost:8888/ammi%20/project.php?id=1') {
+        if (data.next.url.href === 'https://a-mmi.herokuapp.com/project.php?id=1') {
           nextColor = '#279B94';
         }
-        if (data.next.url.href === 'http://localhost:8888/ammi%20/project.php?id=2') {
+        if (data.next.url.href === 'https://a-mmi.herokuapp.com/project.php?id=2') {
           nextColor = 'grey';
         }
-        if (data.next.url.href === 'http://localhost:8888/ammi%20/project.php?id=3') {
+        if (data.next.url.href === 'https://a-mmi.herokuapp.com/project.php?id=3') {
           nextColor = '#D55000';
         }
-        if (data.current.namespace === 'project' && data.next.namespace != 'project') {
+        if (data.current.namespace === ('project' || 'home') && data.next.namespace != ('project' || 'home')) {
           textColor = 1;
         }
 
