@@ -27,7 +27,7 @@ require ('php/session.php');
       </div>
     </div>
     <main data-barba="container" data-barba-namespace="home">
-        <p class='credits'>Background by <a href='https://www.instagram.com/yoshisodeoka/?hl=en'>Yoshi Sodeoka</a></p>
+        <p class='credits'>Background by <a class="whitetext" href='https://www.instagram.com/yoshisodeoka/?hl=en'>Yoshi Sodeoka</a></p>
         <div class="vimeo-wrapper">
       <div class="overlay"></div>
       <iframe src="https://player.vimeo.com/video/412813271?background=1&autoplay=1&mute=1&loop=1"
@@ -55,7 +55,7 @@ require ('php/session.php');
 
       <div class="container main">
 
-        <h1 class="is-animated">We are <span class="bold whitetext">A-MMI</span>,</h1>
+        <h1 class="is-animated whitetext">We are <span class="bold whitetext">A-MMI</span>,</h1>
         <h1 class="is-animated whitetext">born from creativity.</h1>
 
         <ul class="list-group list-group-horizontal main fadein">
