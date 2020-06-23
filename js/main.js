@@ -48,7 +48,9 @@ $(function() {
         }
         if ((data.current.namespace === 'project' && data.next.namespace != 'project') || (data.current.namespace === 'home' && data.next.namespace != 'home')) {
           textColor = 1;
-          console.log('W2B');
+        }
+        if (data.current.namespace === ('about' || 'collection') && data.next.namespace === 'home') {
+          textColor = 2;
         }
 
         pageTransition();
@@ -59,8 +61,11 @@ $(function() {
 
       async enter(data) {
         if (textColor == 1) {
-          console.log('vecdz');
           $('body').removeClass('whitetext');
+          textColor = 0;
+        }
+        if (textColor == 2) {
+          $('body').addClass('whitetext');
           textColor = 0;
         }
         contentAnimation();
