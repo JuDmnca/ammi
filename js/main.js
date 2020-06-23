@@ -46,7 +46,7 @@ $(function() {
         if (data.next.url.href === 'https://a-mmi.herokuapp.com/project.php?id=3') {
           nextColor = '#D55000';
         }
-        if (data.current.namespace === 'project' && data.next.namespace != 'project') | (data.current.namespace === 'home' && data.next.namespace != 'home') {
+        if ((data.current.namespace === 'project' && data.next.namespace != 'project') || (data.current.namespace === 'home' && data.next.namespace != 'home')) {
           textColor = 1;
           console.log('W2B');
         }
