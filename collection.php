@@ -38,8 +38,8 @@ require ('php/session.php');
             {echo($_SESSION["account"]["username"]);}?>
             </p>
             <a class="navbar-brand d-inline" href="logout.php">LOGOUT</a>
+            <?php}?>
           </div>
-          <?php}?>
       </nav>
       <a href="login.php" class="dot"><i class="fas fa-circle"></i></a>
 
