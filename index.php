@@ -1,9 +1,9 @@
 <?php
-include_once("php/code.php");
+include ("php/code.php");
 
 $user = new Users;
 $work = new Works;
-require('php/session.php');
+require ('php/session.php');
 
 ?>
 <!DOCTYPE html>
