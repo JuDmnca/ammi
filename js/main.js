@@ -49,10 +49,6 @@ $(function() {
         if ((data.current.namespace === 'project' && data.next.namespace != 'project') || (data.current.namespace === 'home' && data.next.namespace != 'home')) {
           textColor = 1;
         }
-        if (data.current.namespace === 'about' && data.next.namespace === 'home') {
-          textColor = 2;
-          console.log('idkkkk');
-        }
 
         pageTransition();
         await delay(1000);
@@ -63,11 +59,6 @@ $(function() {
       async enter(data) {
         if (textColor == 1) {
           $('body').removeClass('whitetext');
-          textColor = 0;
-        }
-        if (textColor == 2) {
-          console.log('hjfbce');
-          $('body').addClass('whitetext');
           textColor = 0;
         }
         contentAnimation();

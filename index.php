@@ -51,12 +51,12 @@ require ('php/session.php');
           <?php }
           ?>
       </nav>
-      <a href="login.php" class="dot"><i class="fas fa-circle"></i></a>
+      <a href="login.php" class="dot whitetext"><i class="fas fa-circle"></i></a>
 
       <div class="container main">
 
-        <h1 class="is-animated">We are <span class="bold">A-MMI</span>,</h1>
-        <h1 class="is-animated">born from creativity.</h1>
+        <h1 class="is-animated">We are <span class="bold whitetext">A-MMI</span>,</h1>
+        <h1 class="is-animated whitetext">born from creativity.</h1>
 
         <ul class="list-group list-group-horizontal main fadein">
           <li class="list-group-item bold whitetext">Our latest projects</li>
