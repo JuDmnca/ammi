@@ -4,10 +4,10 @@ require("database.php");
 class Users {
     function get_user($id)
     {
-        global $db;
+        global $pdo;
 
         $request = "SELECT * FROM Users WHERE id = $id";
-        $resultat = $db->query($request);
+        $resultat = $pdo->query($request);
         $user = $resultat->fetch();
 
         return($user);
@@ -15,18 +15,18 @@ class Users {
 
     function create($username, $password)
     {
-        global $db;
+        global $pdo;
 
-        $request = $db->prepare('INSERT INTO Users (username, password) VALUES (?, ?)');
+        $request = $pdo->prepare('INSERT INTO Users (username, password) VALUES (?, ?)');
         $request->execute([$username, $password]);
     }
 
     function connect($username, $password)
     {
-        global $db;
+        global $pdo;
 
         $request = "SELECT * FROM Users WHERE username=\"$username\"";
-        $resultat = $db->query($request);
+        $resultat = $pdo->query($request);
         $user = $resultat->fetch();
 
         if($password == $user["password"])
@@ -49,10 +49,10 @@ class Users {
 class works {
     function get_works()
     {
-        global $db;
+        global $pdo;
 
         $request = "SELECT * FROM works";
-        $resultat = $db->query($request);
+        $resultat = $pdo->query($request);
         $work = $resultat->fetchAll();
 
         return($work);
@@ -60,10 +60,10 @@ class works {
 
     function get_work($id)
     {
-        global $db;
+        global $pdo;
 
         $request = "SELECT * FROM works WHERE id = $id";
-        $resultat = $db->query($request);
+        $resultat = $pdo->query($request);
         $work = $resultat->fetch();
 
         return($work);
@@ -71,17 +71,17 @@ class works {
 
     function create($title, $date, $description, $media, $video, $artist, $link)
     {
-        global $db;
+        global $pdo;
 
-        $request = $db->prepare('INSERT INTO works (title, date, description, media, video, artist, link) VALUES (?, ?, ?, ?, ?, ?)');
+        $request = $pdo->prepare('INSERT INTO works (title, date, description, media, video, artist, link) VALUES (?, ?, ?, ?, ?, ?)');
         $request->execute([$title, $date, $description, $media, $video, $artist, $link]);
     }
 
     function update($title, $date, $description, $media, $video, $artist, $link, $id)
     {
-        global $db;
+        global $pdo;
 
-        $request = $db->prepare('UPDATE works SET title=?, date=?, description=?, media=?, video=?, artist=?, link=? WHERE id=?');
+        $request = $pdo->prepare('UPDATE works SET title=?, date=?, description=?, media=?, video=?, artist=?, link=? WHERE id=?');
         $request->execute([$title, $date, $description, $media, $video, $artist, $link, $id]);
     }
 
