@@ -1,10 +1,10 @@
 <?php
-include_once("php/code.php");
+include ("php/code.php");
 
 $user = new Users;
 $work = new works;
 
-require('php/session.php');
+require ('php/session.php');
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ require('php/session.php');
           foreach($allworks as $w)
           {
         ?>
-        <li class="list-group-item"><a href="project.php?id=<?= $w["id"] ?>"><?php echo($w["title"]); ?></a></li>
+        <li class="list-group-item"><a href="project.php?id=<?= $w->id ?>"><?php echo($w->title); ?></a></li>
         <?php
           }
         ?>

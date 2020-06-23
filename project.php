@@ -1,5 +1,5 @@
 <?php
-include_once("php/code.php");
+include ("php/code.php");
 
 $user = new Users;
 $work = new works;
@@ -8,16 +8,14 @@ $id = $_GET["id"];
 
 $w = $work->get_work($id);
 
-require('php/session.php');
-
+require ('php/session.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-MMI - <?php echo($w["title"]); ?></title>
+    <title>A-MMI - <?php echo($w->title); ?></title>
 
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700&display=swap" rel="stylesheet">
 
@@ -31,7 +29,7 @@ require('php/session.php');
       <div class="loading-screen"></div>
     </div>
     <main data-barba="container" data-barba-namespace="project">
-      <div class="bg-img" style="background-image: url(<?php echo($w['media']); ?>)"></div>
+      <div class="bg-img" style="background-image: url(<?php echo($w->media); ?>)"></div>
       <div class="black-overlay"></div>
 
       <nav class="navbar navbar-light project">
@@ -50,11 +48,11 @@ require('php/session.php');
 
       <div class="container main">
         <div class="project whitetext">
-          <h1 class="bold is-animated"><?php echo($w["title"]); ?></h1>
+          <h1 class="bold is-animated"><?php echo($w->title); ?></h1>
           <div class="is-animated">
-            <h2 class="author"><?php echo($w["artist"]); ?> - <?php echo($w["date"]); ?></h2>
-            <p class="whitetext"><?php echo($w["description"]); ?></p>
-            <a href="<?php echo($w["link"]); ?>" class="btn btn-outline-secondary">See more</a>
+            <h2 class="author"><?php echo($w->artist); ?> - <?php echo($w->date); ?></h2>
+            <p class="whitetext"><?php echo($w->description); ?></p>
+            <a href="<?php echo($w->link); ?>" class="btn btn-outline-secondary">See more</a>
           </div>
         </div>
 
@@ -65,7 +63,7 @@ require('php/session.php');
             foreach($allworks as $w)
             {
           ?>
-          <li class="list-group-item whitetext"><a href="project.php?id=<?= $w["id"] ?>"><?php echo($w["title"]); ?></a></li>
+          <li class="list-group-item whitetext"><a href="project.php?id=<?= $w->id ?>"><?php echo($w->title); ?></a></li>
           <?php
             }
           ?>
