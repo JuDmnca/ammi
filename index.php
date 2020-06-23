@@ -35,8 +35,8 @@ require('php/session.php');
       <nav class="navbar navbar-light project">
           <a class="navbar-brand bold" href="index.php">A-MMI</a>
           <div class="ml-auto">
-            <a class="navbar-brand bold" href="collection.php">Our collection</a>
-            <a class="navbar-brand bold" href="about.php">About us</a>
+            <a class="navbar-brand bold" src="/collection.php">Our collection</a>
+            <a class="navbar-brand bold" src="/about.php">About us</a>
             <?php
                 if($Connected == true){
             ?>
