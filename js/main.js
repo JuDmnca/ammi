@@ -51,6 +51,7 @@ $(function() {
         }
         if (data.current.namespace === ('about' || 'collection') && data.next.namespace === 'home') {
           textColor = 2;
+          console.log('idkkkk');
         }
 
         pageTransition();
@@ -65,6 +66,7 @@ $(function() {
           textColor = 0;
         }
         if (textColor == 2) {
+          console.log('hjfbce');
           $('body').addClass('whitetext');
           textColor = 0;
         }
