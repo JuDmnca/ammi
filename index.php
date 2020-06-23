@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+
 <?php
-session_start();
+//session_start();
 //include_once("php/code.php");
 
-$user = new Users;
-$work = new Works;
+//$user = new Users;
+//$work = new Works;
 //require('php/session.php');
 ?>
 
@@ -22,6 +22,7 @@ $work = new Works;
   print_r ($details);
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
       <meta charset="UTF-8">
