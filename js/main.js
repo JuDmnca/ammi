@@ -49,7 +49,7 @@ $(function() {
         if ((data.current.namespace === 'project' && data.next.namespace != 'project') || (data.current.namespace === 'home' && data.next.namespace != 'home')) {
           textColor = 1;
         }
-        if (data.current.namespace === ('about' || 'collection') && data.next.namespace === 'home') {
+        if ((data.current.namespace === ('about' || 'collection')) && data.next.namespace === 'home') {
           textColor = 2;
           console.log('idkkkk');
         }
